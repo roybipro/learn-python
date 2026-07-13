@@ -31,17 +31,33 @@
 
 
 # objects
-class Bags :
-    name = "Roys"
+# class Bags :
+#     name = "Roys"
     
-    def details(self):
-        print("This is the company who create bags")
+#     def details(self):
+#         print("This is the company who create bags")
         
 
-rebook = Bags()
-campus = Bags()
+# rebook = Bags()
+# campus = Bags()
 
-print(rebook.name)
-print(campus.name)
+# print(rebook.name)
+# print(campus.name)
 
-rebook.details()
+# rebook.details()
+
+
+#constructors
+class Bags:
+    def __init__(self,material,zips,pockets):  #self hold the location of object
+        self.material = material
+        self.zips = zips
+        self.pockets = pockets
+        
+    
+    
+rebook = Bags("leather",3,2)
+campus = Bags("polyster",2,4)
+
+print(rebook.material)
+print(campus.material)
