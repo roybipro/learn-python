@@ -36,7 +36,13 @@ class Reebok(BagFactory):
         print(self.color)
         return super().details()
       
+class Campus(Reebok):
+    def __init__(self, material, zips, pockets, color, size ):
+        super().__init__(material, zips, pockets, color)
+        self.size = size
         
+        
+         
 urbanland = BagFactory("Lather",3,4)
 
 bag2 = Reebok("Polyster",3,3)
