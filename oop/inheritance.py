@@ -15,34 +15,52 @@
 
 # your child object has all the powers to access the attributes and methodes of parent calss
 
-class BagFactory:
-    def __init__ (self,material,zips,pockets):
-        self.material = material
-        self.zips = zips
-        self.pockets = pockets
+# class BagFactory:
+#     def __init__ (self,material,zips,pockets):
+#         self.material = material
+#         self.zips = zips
+#         self.pockets = pockets
     
-    def details(self):
-        print("Your bag details are")
-        print(self.material)
-        print(self.zips)
-        print(self.pockets)
+#     def details(self):
+#         print("Your bag details are")
+#         print(self.material)
+#         print(self.zips)
+#         print(self.pockets)
         
-class Reebok(BagFactory):
-    def __init__(self, material, zips, pockets,color):
-        super().__init__(material, zips, pockets)
-        self.color = color
+# class Reebok(BagFactory):
+#     def __init__(self, material, zips, pockets,color):
+#         super().__init__(material, zips, pockets)
+#         self.color = color
     
-    def details(self):
-        print(self.color)
-        return super().details()
+#     def details(self):
+#         print(self.color)
+#         return super().details()
       
-class Campus(Reebok):
-    def __init__(self, material, zips, pockets, color, size ):
-        super().__init__(material, zips, pockets, color)
-        self.size = size
+# class Campus(Reebok):
+#     def __init__(self, material, zips, pockets, color, size ):
+#         super().__init__(material, zips, pockets, color)
+#         self.size = size
         
         
          
-urbanland = BagFactory("Lather",3,4)
+# urbanland = BagFactory("Lather",3,4)
 
-bag2 = Reebok("Polyster",3,3)
+# bag2 = Reebok("Polyster",3,3)
+
+
+#### multiple inheraitace
+
+class Animals:
+    def __init__(self,name):
+        self.name = name
+
+class Humnas:
+    def __init__(self,id):
+        self.id = id
+        
+class Robots(Animals,Humnas):
+    def __init__(self, id, name):
+        super().__init__(name)
+        super().__init__(id)
+
+robo = Robots(12,"Dona")
