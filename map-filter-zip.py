@@ -18,8 +18,15 @@
 
 #filter 
 
-math_marks = [90, 25, 67, 45, 80, 89, 99, 100, 34]
+# math_marks = [90, 25, 67, 45, 80, 89, 99, 100, 34]
 
-passed = filter(lambda x : x >= 50, math_marks)
+# passed = filter(lambda x : x >= 50, math_marks)
 
-print(list(passed))
+# print(list(passed))
+
+#zip
+name = ["Bipro","Dipto","Rifat","Sakib"]
+marks = [90, 25, 67, 45]
+
+result = zip(name, marks)
+print(dict(result))
